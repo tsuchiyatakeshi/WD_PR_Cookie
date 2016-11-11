@@ -4,10 +4,15 @@
 String[] names  = { "name", "address" };
 String[] values = { "", "" };
 Cookie[] cookies = request.getCookies();
-if(cookies != null) {
-	for(int i = 0; i < names.length; i++) {
-		for(Cookie cook : cookies) {
-			if(cook.getName().equals(names[i])) {
+
+if(cookies != null)
+{
+	for(int i = 0; i < names.length; i++) 
+	{
+		for(Cookie cook : cookies) 
+		{
+			if(cook.getName().equals(names[i])) 
+			{
 				values[i] = cook.getValue();
 				break;
 			}
