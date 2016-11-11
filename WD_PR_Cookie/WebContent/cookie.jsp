@@ -5,9 +5,13 @@ boolean flag = false;
 int count = 1;
 Cookie cook = null;
 Cookie[] cookies = request.getCookies();
-if(cookies != null) {
-	for(Cookie current : cookies) {
-		if(current.getName().equals("cnt") == true) {
+
+if(cookies != null)
+{
+	for(Cookie current : cookies) 
+	{
+		if(current.getName().equals("cnt") == true)
+		{
 			count = Integer.parseInt(current.getValue()) + 1;
 			cook = new Cookie("cnt", (new Integer(count)).toString());
 			cook.setMaxAge(60 * 60 * 24 * 180);
